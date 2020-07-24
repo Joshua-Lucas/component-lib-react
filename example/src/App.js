@@ -1,10 +1,18 @@
-import React from 'react'
-
-import { ExampleComponent } from '@jludev/component-lib-react'
-import '@jludev/component-lib-react/dist/index.css'
+import React, { useState } from 'react'
+import { Input } from '@jludev/component-lib-react'
 
 const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
+  const [state, setState] = useState('')
+  return (
+    <div className='App'>
+      <Input
+        label='Name'
+        type='text'
+        value={state}
+        event={(e) => setState(e.target.value)}
+      />
+    </div>
+  )
 }
 
 export default App
