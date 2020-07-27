@@ -46,18 +46,19 @@ Here is a list of avaible componets included in the package.
 #### Basic Elements
 
 **Form Elements**
+
 Buttons:
   * PrimaryButton
   * SecondaryButton
   * TiriaryButton
 
 Inputs:
-  *Input (Props it takes are {label, type, value, event})
+  * Input (Props it takes are {label, type, value, event})
 
 #### Commonly used Components
 
 **Forms**
-\*SignupForm
+  * SignupForm
 
 ### Customize Styles
 
