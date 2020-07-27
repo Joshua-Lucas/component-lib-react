@@ -2,6 +2,33 @@
 
 > A React Component Library
 
+This library is created using styled-components so the best way to customize each componet to fit your project needs is to pass a theme object to your theme provider.
+
+Example of how to pass your custom theme to your whole app.
+
+```jsx
+import React, { Component } from 'react'
+import { ThemeProvider } from 'styled-components'
+import MyComponent from '@jludev/component-lib-react'
+
+// Your Theme Object
+const theme = {
+  primaryColor: red;
+}
+
+const Example => () {
+
+    return(
+      <ThemeProvider theme={theme} >
+        <div>
+          <MyComponent />
+        <div>
+      </ThemeProvider>
+    );
+
+}
+```
+
 [![NPM](https://img.shields.io/npm/v/@jludev/component-lib-react.svg)](https://www.npmjs.com/package/@jludev/component-lib-react) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Install
@@ -10,18 +37,22 @@
 npm install --save @jludev/component-lib-react
 ```
 
-## Usage
+## Documentation
+
+Example of how simple it is to implement a component from this library.
 
 ```jsx
 import React, { Component } from 'react'
-
 import MyComponent from '@jludev/component-lib-react'
-import '@jludev/component-lib-react/dist/index.css'
 
-class Example extends Component {
-  render() {
-    return <MyComponent />
-  }
+const Example => () {
+
+    return(
+      <div>
+        <MyComponent />
+      <div>
+    );
+
 }
 ```
 
