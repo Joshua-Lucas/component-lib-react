@@ -1,3 +1,5 @@
 import Input from './FormComponents/Input'
 
-export { Input }
+import Buttons from './FormComponents/Buttons'
+
+export { Input, Buttons }
