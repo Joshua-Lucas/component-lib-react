@@ -12,9 +12,11 @@ npm install --save @jludev/component-lib-react
 
 ## Documentation
 
-This library is created using styled-components so you will need to pull in styled-components as well to use this library.
+This library is created using styled-components so you will need to pull in styled-components as a dependency to use this library.
 
-(https://styled-components.com/)
+Review Styled-Components Docs(https://styled-components.com/)
+
+How to pull in off of npm
 
 ```bash
 npm install --save styled-components
@@ -37,7 +39,26 @@ const Example => () {
 }
 ```
 
-## Customize Styles
+#### Avaiable Components
+
+Here is a list of avaible componets included in the package.
+
+##### Basic Elements
+
+**Form Elements**
+Buttons:
+*primaryButton
+*secondaryButton
+*tiriaryButton
+Inputs:
+*Input (Props it takes are {label, type, value, event})
+
+##### Commonly used Components
+
+**Forms**
+\*SignupForm
+
+### Customize Styles
 
 This library is created using styled-components so the best way to customize each componet to fit your project needs is to pass a theme object to your theme provider.
 
@@ -64,6 +85,19 @@ const Example => () {
     );
 
 }
+```
+
+#### ThemeFile Keys
+
+For now these are the only aspects of components that can be customized.
+
+```jsx
+  const theme = {
+  primaryColor: //color
+  secondaryColor: //color
+  tiriaryColor: //color
+
+  }
 ```
 
 ## License
