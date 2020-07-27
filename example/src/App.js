@@ -1,17 +1,13 @@
-import React, { useState } from 'react'
-import { Input } from '@jludev/component-lib-react'
+import React from 'react'
+import { ThemeProvider } from 'styled-components'
+import { Theme } from './Utills'
+import FormExample from './Components/FormExample'
 
 const App = () => {
-  const [state, setState] = useState('')
   return (
-    <div className='App'>
-      <Input
-        label='Name'
-        type='text'
-        value={state}
-        event={(e) => setState(e.target.value)}
-      />
-    </div>
+    <ThemeProvider theme={Theme}>
+      <FormExample />
+    </ThemeProvider>
   )
 }
 
