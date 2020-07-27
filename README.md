@@ -47,9 +47,9 @@ Here is a list of avaible componets included in the package.
 
 **Form Elements**
 Buttons:
-  *PrimaryButton
-  *SecondaryButton
-  *TiriaryButton
+  * PrimaryButton
+  * SecondaryButton
+  * TiriaryButton
 Inputs:
   *Input (Props it takes are {label, type, value, event})
 
