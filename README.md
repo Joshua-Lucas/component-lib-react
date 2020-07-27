@@ -50,6 +50,7 @@ Buttons:
   * PrimaryButton
   * SecondaryButton
   * TiriaryButton
+
 Inputs:
   *Input (Props it takes are {label, type, value, event})
 
