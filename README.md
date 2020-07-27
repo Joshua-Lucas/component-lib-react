@@ -39,21 +39,21 @@ const Example => () {
 }
 ```
 
-#### Avaiable Components
+### Avaiable Components
 
 Here is a list of avaible componets included in the package.
 
-##### Basic Elements
+#### Basic Elements
 
 **Form Elements**
 Buttons:
-*primaryButton
-*secondaryButton
-*tiriaryButton
+  *PrimaryButton
+  *SecondaryButton
+  *TiriaryButton
 Inputs:
-*Input (Props it takes are {label, type, value, event})
+  *Input (Props it takes are {label, type, value, event})
 
-##### Commonly used Components
+#### Commonly used Components
 
 **Forms**
 \*SignupForm
