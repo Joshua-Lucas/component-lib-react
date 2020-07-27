@@ -21,8 +21,9 @@ export const Theme = {
   tirtiaryColor: colors.white,
 
   // Text Color
-  primaryTextColor: colors.white,
-  secondarydTestColor: colors.gray[200],
+
+  primaryTextColor: colors.gray[200],
+  secondarydTestColor: colors.white,
 
   // Button Colors
   primaryHoverColor: colors.black[100],
