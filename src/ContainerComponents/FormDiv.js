@@ -1,8 +1,8 @@
 import styled from 'styled-components'
-import screenSize from '../Utills/ContinerSize'
+import screenSize from '../Utills/ContainerSize'
 
 const FormDiv = styled.div`
-  margin: 1rem;
+  padding: 1rem;
 
   @media ${screenSize.md} {
     max-width: 85%;

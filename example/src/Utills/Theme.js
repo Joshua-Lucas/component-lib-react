@@ -19,7 +19,7 @@ export const Theme = {
   primaryColor: colors.blue,
   secondaryColor: colors.black[100],
   tirtiaryColor: colors.white,
-
+  lightNeutralColor: colors.gray[100],
   // Text Color
 
   primaryTextColor: colors.gray[200],
