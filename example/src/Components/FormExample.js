@@ -2,7 +2,9 @@ import React, { useState } from 'react'
 import {
   Input as FormInput,
   Buttons,
-  FormDiv
+  FormDiv,
+  Dropdown,
+  UtilityStyles
 } from '@jludev/component-lib-react'
 import styled from 'styled-components'
 
@@ -12,6 +14,13 @@ import styled from 'styled-components'
 */
 
 // Styled-Components
+const FormContainer = styled(FormDiv)`
+  background-color: '#fff';
+  padding: 1.25rem;
+  border-radius: ${UtilityStyles.borderRadius.md};
+  box-shadow: ${UtilityStyles.boxShadow.xxl};
+`
+
 const FormElement = styled.form`
   display: flex;
   flex-direction: column;
@@ -23,6 +32,7 @@ const FormExample = () => {
   const [nameInput, setNameInput] = useState('')
   const [emailInput, setEmailInput] = useState('')
   const [passwordInput, setPasswordInput] = useState('')
+  const [ad, setAd] = useState('')
 
   const submittion = {
     name: nameInput,
@@ -36,31 +46,36 @@ const FormExample = () => {
   }
 
   return (
-    <FormDiv className='FormExample'>
+    <FormContainer className='FormExample'>
       <FormElement onSubmit={submitHandle}>
         <FormInput
-          label='Name'
+          label='name'
           type='text'
           value={nameInput}
           event={(e) => setNameInput(e.target.value)}
         />
         <FormInput
-          label='Email'
-          type='Email'
+          label='email'
+          type='email'
           value={emailInput}
           event={(e) => setEmailInput(e.target.value)}
         />
         <FormInput
-          label='Password'
+          label='password'
           type='password'
           value={passwordInput}
           event={(e) => setPasswordInput(e.target.value)}
+        />
+        <Dropdown
+          label='how did you hear of us?'
+          options={['Test 1', 'Test2', 'Test 3']}
+          event={(e) => setAd(e.target.value)}
         />
         <Buttons name='submit' type='submit'>
           Submit
         </Buttons>
       </FormElement>
-    </FormDiv>
+    </FormContainer>
   )
 }
 
