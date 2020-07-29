@@ -2,6 +2,7 @@
 
 > A React Component Library
 
+
 [![NPM](https://img.shields.io/npm/v/@jludev/component-lib-react.svg)](https://www.npmjs.com/package/@jludev/component-lib-react) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Install
@@ -55,10 +56,84 @@ Buttons:
 Inputs:
   * Input (Props it takes are {label, type, value, event})
 
-#### Commonly used Components
+Select:
+  * Dropdown //Props{label, options[], event(This goes to an onChange & onBlur event)}
+  
+  
+  
 
-**Forms**
-  * SignupForm
+#### Utility Styles
+
+I have used these utility styles to help with quickly building style components. Here they are if you would like to use them.
+
+example of using utility styles:
+```jsx
+import UtilityStyles from '@jludev/component-lib-react'
+
+const FormContainer = styled(FormDiv)`
+  background-color: '#fff';
+  padding: 1.25rem;
+  border-radius: ${UtilityStyles.borderRadius.md};
+  box-shadow: ${UtilityStyles.boxShadow.xxl};
+  
+   @media ${screenSize.md} {
+    padding: 0.5rem;
+  }
+  
+`
+
+```
+**Border Radius** 
+
+UtilityStyles.borderRadius. 
+    
+    Key:   Value:
+    none: '0',
+  
+    sm: '0.125rem',
+    
+    base: '0.25rem',
+    
+    md: '0.375rem',
+    
+    lg: '0.5rem',
+    
+    full: '9999px'
+    
+**Box Shadow**
+
+UtilityStyles.boxShadow.
+
+      Key:   Value:
+      sm: ' 0 1px 2px 0 rgba(0, 0, 0, 0.05)',
+      
+      base: ' 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
+      
+      md: ' 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+      
+      lg:' 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
+      
+      xl:'0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
+      
+      xxl: ' 0 25px 50px -12px rgba(0, 0, 0, 0.25)',
+      
+      outline: ' 0 0 0 3px rgba(66, 153, 225, 0.5)'
+
+**Continer Size**
+
+UtilityStyles.screenSize.
+
+    Key:  Value:
+     sm: '(min-width: 640px)',
+     
+     md: '(min-width: 768px)',
+     
+     lg: '(min-width: 1024px)',
+     
+     xl: '(min-width: 1280px)'
+
+    
+  
 
 ### Customize Styles
 
