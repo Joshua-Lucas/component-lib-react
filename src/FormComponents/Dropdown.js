@@ -36,7 +36,7 @@ const OptionElement = styled.option`
 `
 
 // COMPONENTS
-const Dropdown = ({ label, options, value, event }) => {
+const Dropdown = ({ label, options, event }) => {
   const id = `dropdown-${label.replace(' ', '').toLowerCase()}`
   const selections = options.map((option) => (
     <OptionElement key={option} value={option}>
