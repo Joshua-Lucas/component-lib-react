@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import {
   Input as FormInput,
+  TextArea as DetailsTextArea,
   Buttons,
   FormDiv,
   Dropdown,
@@ -33,6 +34,7 @@ const FormExample = () => {
   const [emailInput, setEmailInput] = useState('')
   const [passwordInput, setPasswordInput] = useState('')
   const [ad, setAd] = useState('')
+  const [details, setDetails] = useState('')
 
   const submittion = {
     name: nameInput,
@@ -70,6 +72,10 @@ const FormExample = () => {
           label='how did you hear of us?'
           options={['Test 1', 'Test2', 'Test 3']}
           event={(e) => setAd(e.target.value)}
+        />
+        <DetailsTextArea
+          label='Details'
+          event={(e) => setDetails(e.target.value)}
         />
         <Buttons name='submit' type='submit'>
           Submit
