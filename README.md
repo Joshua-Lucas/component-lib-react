@@ -59,7 +59,9 @@ Inputs:
 Select:
   * Dropdown //Props{label, options[], event(This goes to an onChange & onBlur event)}
   
-  
+  Textarea:
+
+  * Textarea //Props{label, required?(optional boolean), event(This goes to an onChange)}
   
 
 #### Utility Styles
