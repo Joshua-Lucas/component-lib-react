@@ -1,0 +1,96 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title='component-lib-react| Welcome' />
+
+# Welcome
+
+This storybook shows the components in my component library and how to use them.
+
+## Usage
+
+This component library can be used to quickly create react apps
+
+## Install
+
+This components libray use styled-components and allows for customable themes.
+
+1. Start by pulling in this package from npm.
+   https://www.npmjs.com/package/@jludev/component-lib-react
+
+```
+    npm i @jludev/component-lib-react
+```
+
+2. Pull in styled-components.
+   (see Documenttation here https://styled-components.com/docs/basics )
+
+```
+npm i  styled-components
+```
+
+3.  Set up a theme file in your src folder with these keys.
+
+    - This file is just an js object exported then pulled in with the ThemeProvider component from styled-Components.
+
+```jsx
+export const Theme = {
+  // Brand Colors
+  primaryColor: //Your color here
+  secondaryColor: //Your color here
+  tirtiaryColor: //Your color here
+  lightNeutralColor: //Your color here
+
+  // Text Color
+  primaryTextColor: //Your color here
+  secondarydTestColor: //Your color here
+
+  // Button Colors
+  primaryHoverColor: //Your color here
+  secondaryHoverColor: //Your color here
+}
+```
+
+4. Pull Provide your theme to your app.
+
+   - Wrap your app with the ThemProvider that way your whole app will have acces to your theme.(styled-components documentation )
+
+```jsx
+import React from 'react'
+import { ThemeProvider } from 'styled-components'
+import { Theme } from './Utills'
+import FormExample from './Components/FormExample'
+
+const App = () => {
+  return (
+    <ThemeProvider theme={Theme}>
+      <FormExample />
+    </ThemeProvider>
+  )
+}
+
+export default App
+```
+
+5. Now you are ready to use the components
+
+   - just import the components and start using as you would a regualr component.
+
+```jsx
+import React from 'react'
+import {PrimaryButton} from '@jludev/component-lib-react'
+
+const example () => {
+    return (
+        <div>
+            <PrimaryButton>Hello World</PrimaryButton>
+        </div>
+    )
+}
+
+export default example
+
+```
+
+## License
+
+MIT © Joshua-Lucas
